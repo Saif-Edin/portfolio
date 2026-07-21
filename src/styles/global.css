@@ -1,0 +1,41 @@
+/* Font self-hosted (niente richieste a Google — GDPR + performance) */
+@import '@fontsource/syne/600.css';
+@import '@fontsource/syne/700.css';
+@import '@fontsource/syne/800.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/jetbrains-mono/400.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg:      #F9F9F7;
+  --color-text:    #0F0F0F;
+  --color-soft:    #6A6A6A; /* ≥4.5:1 su --color-bg (WCAG AA) */
+  --color-border:  #E8E8E4;
+  --color-primary: #C84B2F;
+
+  --font-heading: 'Syne', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }

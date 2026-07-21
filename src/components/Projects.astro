@@ -1,0 +1,71 @@
+---
+import ProjectCard from './ProjectCard.astro'
+
+const projects = [
+  {
+    title: 'AFAM Experience Platform',
+    description: 'Sistema per la catalogazione e la condivisione volontaria di esperienze, CV e materiali da parte degli studenti AFAM.',
+    descriptionKey: 'projects.descriptions.afam',
+    tech: ['Java', 'SQL', 'HTML', 'CSS', 'JavaScript'],
+    href: '/projects/afam',
+    wip: true,
+  },
+  {
+    title: 'Restaurant Manager AI',
+    description: 'Gestionale per ristorante con chat AI: ordinazioni a tavolo, etichette vino via foto, gestione menu via app mobile.',
+    descriptionKey: 'projects.descriptions.restaurant',
+    tech: ['JavaScript', 'Python', 'SQL', 'AI API'],
+    href: '/projects/restaurant',
+    wip: true,
+  },
+]
+---
+
+<section class="projects" id="projects">
+  <div class="projects-inner">
+    <h2 class="section-title" data-i18n="projects.title">Progetti</h2>
+    <div class="projects-grid">
+      {projects.map(p => (
+        <ProjectCard
+          title={p.title}
+          description={p.description}
+          descriptionKey={p.descriptionKey}
+          tech={p.tech}
+          href={p.href}
+          wip={p.wip}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects {
+    padding: 6rem 2rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .projects-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 3rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
