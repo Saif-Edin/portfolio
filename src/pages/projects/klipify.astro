@@ -1,0 +1,79 @@
+---
+import Base from '../../layouts/Base.astro'
+
+const tech = ['Python', 'Whisper', 'Claude API', 'ffmpeg']
+---
+
+<Base title="klipify — SaifEdin">
+  <article class="project-page">
+    <div class="project-inner">
+      <a href="/#projects" class="back-link" data-i18n="projects.back">← Progetti</a>
+
+      <header class="project-header">
+        <span class="project-badge" data-i18n="projects.wip">In progress</span>
+        <h1 class="project-title">klipify</h1>
+        <p class="project-meta" data-i18n="projectPage.klipify.meta">Progetto personale · open source</p>
+      </header>
+
+      <section class="project-section">
+        <h2 data-i18n="projectPage.sections.description">Descrizione</h2>
+        <p data-i18n="projectPage.klipify.description">
+          Strumento a riga di comando che analizza un video lungo (podcast, intervista, vlog, tutorial),
+          individua i momenti più forti, assegna a ognuno un punteggio di viralità da 1 a 100 e ritaglia
+          le clip pronte per TikTok, Reels e Shorts. Tutto gira in locale: il video non viene mai caricato
+          in cloud, all'AI arriva solo il testo trascritto.
+        </p>
+      </section>
+
+      <section class="project-section">
+        <h2 data-i18n="projectPage.sections.features">Funzionalità principali</h2>
+        <ul style="padding-left: 1.25rem; line-height: 2;">
+          <li data-i18n="projectPage.klipify.features.0">Trascrizione locale con Whisper, ottimizzata per Apple Silicon</li>
+          <li data-i18n="projectPage.klipify.features.1">Analisi dei momenti forti con l'API di Claude e punteggio 1–100</li>
+          <li data-i18n="projectPage.klipify.features.2">Taglio con ffmpeg senza ricompressione: istantaneo e senza perdita</li>
+          <li data-i18n="projectPage.klipify.features.3">Tetti di spesa per esecuzione e mensili, report Markdown delle clip</li>
+        </ul>
+      </section>
+
+      <section class="project-section">
+        <h2 data-i18n="projectPage.sections.role">Il mio ruolo</h2>
+        <p data-i18n="projectPage.klipify.role">
+          Progetto personale: progettazione della pipeline, scelta delle tecnologie, sviluppo in Python
+          e integrazione con l'API di Claude.
+        </p>
+      </section>
+
+      <section class="project-section">
+        <h2 data-i18n="projectPage.sections.stack">Tech stack</h2>
+        <div class="tech-list">
+          {tech.map(t => <span class="tech-pill">{t}</span>)}
+        </div>
+      </section>
+
+      <div class="project-links">
+        <a href="https://github.com/Saif-Edin/klipify" class="cta-primary" target="_blank" rel="noopener noreferrer">
+          GitHub →
+        </a>
+      </div>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .project-page { padding: 3rem 2rem 6rem; }
+  .project-inner { max-width: 720px; margin: 0 auto; }
+  .back-link { font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-soft); text-decoration: none; display: inline-block; margin-bottom: 2.5rem; transition: color 0.15s; }
+  .back-link:hover { color: var(--color-primary); }
+  .project-header { margin-bottom: 3rem; }
+  .project-badge { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-primary); border: 1px solid var(--color-primary); padding: 0.2rem 0.5rem; display: inline-block; margin-bottom: 1rem; }
+  .project-title { font-family: var(--font-heading); font-weight: 800; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin-bottom: 0.75rem; }
+  .project-meta { font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-soft); }
+  .project-section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--color-border); }
+  .project-section h2 { font-family: var(--font-heading); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-soft); margin-bottom: 1rem; }
+  .project-section p, .project-section ul { font-size: 1rem; line-height: 1.8; }
+  .tech-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tech-pill { font-family: var(--font-mono); font-size: 0.8rem; padding: 0.35rem 0.75rem; border: 1px solid var(--color-border); }
+  .project-links { margin-top: 2.5rem; }
+  .cta-primary { background: var(--color-primary); color: #fff; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; padding: 0.875rem 1.75rem; text-decoration: none; display: inline-block; transition: opacity 0.15s; }
+  .cta-primary:hover { opacity: 0.85; }
+</style>

@@ -3,6 +3,14 @@ import ProjectCard from './ProjectCard.astro'
 
 const projects = [
   {
+    title: 'klipify',
+    description: 'Trova automaticamente i momenti migliori di un video lungo, li punteggia da 1 a 100 e li ritaglia per TikTok/Reels/Shorts. Tutto in locale.',
+    descriptionKey: 'projects.descriptions.klipify',
+    tech: ['Python', 'Whisper', 'Claude API', 'ffmpeg'],
+    href: '/projects/klipify',
+    wip: true,
+  },
+  {
     title: 'AFAM Experience Platform',
     description: 'Sistema per la catalogazione e la condivisione volontaria di esperienze, CV e materiali da parte degli studenti AFAM.',
     descriptionKey: 'projects.descriptions.afam',
@@ -14,7 +22,7 @@ const projects = [
     title: 'Restaurant Manager AI',
     description: 'Gestionale per ristorante con chat AI: ordinazioni a tavolo, etichette vino via foto, gestione menu via app mobile.',
     descriptionKey: 'projects.descriptions.restaurant',
-    tech: ['JavaScript', 'Python', 'SQL', 'AI API'],
+    tech: ['JavaScript', 'Python', 'MySQL', 'AI API'],
     href: '/projects/restaurant',
     wip: true,
   },

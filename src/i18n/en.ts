@@ -38,12 +38,18 @@ export const en: Translations = {
     view: "View project →",
     back: "← Projects",
     descriptions: {
-      afam: "A platform for cataloguing and voluntarily sharing experiences, CVs, and materials by AFAM students.",
+      klipify: "Automatically finds the best moments in a long video, scores them 1 to 100 and cuts them for TikTok/Reels/Shorts. Runs fully locally.",
+      afam:"A platform for cataloguing and voluntarily sharing experiences, CVs, and materials by AFAM students.",
       restaurant: "Restaurant manager with AI chat: table ordering, wine label recognition via photo, menu management via mobile app."
     }
   },
   contact: {
     title: "Contact"
+  },
+  notFound: {
+    title: "Page not found",
+    body: "The page you're looking for doesn't exist or has been moved.",
+    cta: "Back to home"
   },
   projectPage: {
     sections: {
@@ -54,6 +60,17 @@ export const en: Translations = {
       screenshots: "Screenshots"
     },
     screenshotPlaceholder: "Screenshots available when the project is complete",
+    klipify: {
+      meta: "Personal project · open source",
+      description: "Command-line tool that analyses a long video (podcast, interview, vlog, tutorial), finds the strongest moments, gives each one a virality score from 1 to 100 and cuts clips ready for TikTok, Reels and Shorts. Everything runs locally: the video never leaves your machine, only the transcript is sent to the AI.",
+      features: [
+        "Local transcription with Whisper, optimised for Apple Silicon",
+        "Highlight detection with the Claude API and a 1–100 score",
+        "Lossless ffmpeg cutting with no re-encoding: instant and full quality",
+        "Per-run and monthly spending caps, Markdown report of the clips"
+      ],
+      role: "Personal project: pipeline design, technology choices, Python development and Claude API integration."
+    },
     afam: {
       meta: "Software Engineering · UniPa",
       description: "Web platform for cataloguing and voluntarily sharing experiences, CVs and materials by students of the Italian Academies of Fine Arts and Music (AFAM). The goal is a platform that lets students share their educational and professional journey with the academic community.",
